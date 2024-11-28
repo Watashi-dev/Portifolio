@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+
+<style>
+:root {
+    --background-main: #121212;
+    --box-background: #1E1E2F;
+    --primary-title: #7E57C2;
+    --secondary-title: #B39DDB;
+    --text-primary: rgba(255, 255, 255, 0.87);
+    --text-secondary: rgba(255, 255, 255, 0.7);
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "cat content"
+    "cat content"
+    "footer footer";
+    height: 100%;
+}
+
+header{
+    top: 0;
+    height: 68px;
+    position: sticky;
+    grid-area: header;
+    background-color: var(--background-main);
+    color: white;
+}
+nav{
+    grid-area: cat;
+    background-color: var(--box-background);
+    color: white;
+}
+main{
+    grid-area: content;
+    background-color: var(--box-background);
+    color: white;
+    min-height: 100vh;
+}
+
+footer{
+    grid-area: footer;
+    background-color: var(--background-main);
+    color: white;
+}
+
+div img{
+    grid-area: pic;
+    width: 60px;
+    align-items: center;
+    margin: auto;
+}
+
+nav img{
+    width: 50%;
+    max-width: 200px;
+    margin: calc(100vh / 3);
+    margin-left: calc(100vw / 4)
+}
+
+.conteiner{
+    display: grid;
+    grid-template-columns: 1f 1f 1f 1f;
+    grid-template-areas:
+    "pic pic"
+    "categorias categorias";
+}
+
+
+h1{
+    text-align: center;
+    margin: auto;
+    margin-top: 80px;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    nav img{
+        visibility: hidden;
+        position: absolute;
+    }
+    body{
+        grid-template-columns: 1fr;
+        
+    }
+
+    h1{
+
+        margin-top: calc(100vh / 5);
+        margin-bottom: 18px
+
+    }
+
+    p{
+
+        margin: 30px;
+
+    }
+}
+
+
+
+</style>
+</head>
+    <body>
+        <header> 
+            <div class="conteiner">
+                <img src="image.png" alt="logo">
+            </div> </header>
+        <nav> 
+            <img src="image.png" alt="image">
+        </nav>
+        <main>
+            <h1>
+                Jhon Doe's
+            </h1>
+            <div class="conteudo">  <!--usar class caso necessario-->
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro voluptatem recusandae dignissimos magni harum ex laboriosam facere ducimus eaque blanditiis rem libero consequatur iusto culpa temporibus iste unde obcaecati enim architecto error, illo magnam officiis adipisci earum. Numquam quaerat vero at voluptatem, sint explicabo reprehenderit earum omnis molestiae architecto sed sequi molestias deleniti aperiam laboriosam? Cupiditate, soluta tenetur! Ullam, velit nemo? Beatae laborum harum quos! Modi repellat aliquam fugiat quaerat nemo laboriosam nam deleniti tenetur? Expedita, sunt laudantium amet sequi veniam tempore vero eveniet, nemo rem voluptate dicta asperiores sapiente nostrum iure numquam porro earum facere ipsa repellat mollitia? Libero optio, amet laboriosam excepturi a eveniet ipsum laudantium mollitia voluptatum animi deserunt magnam hic unde repellat minima doloribus officia culpa impedit, velit architecto minus possimus? Eum quod ratione natus optio neque ducimus, repellendus a. Laudantium quasi esse aut exercitationem! Quam, fuga quas ab voluptatibus aliquam odit et asperiores at quo atque? Dicta iste ad laudantium eligendi, ea minima numquam blanditiis porro sint consequuntur. Excepturi illo officiis, quidem illum numquam saepe optio odit nemo eum reiciendis dolorem, perspiciatis a dolores omnis. Sed dicta quia rerum quam harum? Dolorum sequi, et quisquam culpa at a deserunt modi iste sed debitis earum placeat?</p>
+            </div>        
+        </main>
+        <footer>rodapé</footer>
+    </body>
+</html>
