@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Smooch&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --background-main: #121212;
+    --box-background: #1E1E2F;
+    --primary-title: #7E57C2;
+    --secondary-title: #B39DDB;
+    --text-primary: rgba(255, 255, 255, 0.87);
+    --text-secondary: rgba(255, 255, 255, 0.7);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "category category"
+    "cat content"
+    "footer footer";
+}
+
+header{
+    top: 0;
+    height: 60px;
+    position: sticky;
+    grid-area: header;
+    background-color: var(--background-main);
+    color: white;
+}
+nav{
+    grid-area: cat;
+    background-color: var(--box-background);
+    color: white;
+}
+main{
+    grid-area: content;
+    background-color: var(--box-background);
+    color: white;
+    min-height: 100vh;
+}
+
+footer{
+    grid-area: footer;
+    background-color: var(--background-main);
+    color: white;
+}
+
+div img{
+    grid-area: pic;
+    width: 60px;
+    align-items: center;
+    margin: auto;
+}
+
+nav img{
+    width: 50%;
+    max-width: 200px;
+    margin: calc(100vh / 3);
+    margin-left: calc(100vw / 4)
+}
+
+.conteiner{
+    display: grid;
+    grid-template-areas:
+    "pic pic";
+}
+
+
+h1{
+    text-align: center;
+    margin: auto;
+    margin-top: 80px;
+}
+
+a{
+    color: #623da1;
+    text-decoration: none;
+    font-size: 26px;
+}
+.category{
+    grid-area: category ;
+    background-color: var(--background-main);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+li{ 
+    
+    padding: 4px;
+    list-style: none;    
+}
+
+
+@media only screen and (max-width: 800px) {
+    
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "cat"
+        "category"
+        "content"
+        "footer" ;
+    }
+    nav img{
+        position: absolute;
+        grid: cat;
+        visibility: hidden;
+    }
+    header{
+        grid-area: header;
+    }
+
+    p{
+        margin: 30px;
+    }
+    
+
+    
+}
+
+
+</style>
+</head>
+  
+    <body>
+        
+        <header> 
+            <div class="conteiner">
+                <img src="image.png" alt="logo">
+                    
+            </div> 
+            
+        </header>
+
+            <div class="category">
+                <li><a href="#">INICIO</a></li>
+                <li><a href="/categorias/project.html">PROJETOS</a></li>
+                <li><a href="/categorias/contact.html">CONTATOS</a></li>
+            </div>
+           
+
+        <nav> 
+            <img src="image.png" alt="image">
+        </nav>
+                
+        <main>
+            
+            <div class="conteudo">  <!--usar class caso necessario-->
+                <h1 style="font-family: Doto;">
+                    Jhon Doe's
+                </h1>
+
+                <p style="font-family: Doto; font-size: 20px; text-align: justify; margin-right: 30px; margin-top: 120px">Eu sou um programador fullstack, CEO e corredor de moto, com 20 anos. Estou sempre buscando expandir meu conhecimento em várias linguagens de programação, como Python, JavaScript, Node.js, CSS, C#, PHP, além de outras linguagens. Tenho um forte interesse em criar aplicativos, explorar o mundo do hacking ético e desenvolver interfaces e sites. Também estou produzindo ebooks voltados para iniciantes e pessoas que desejam aprender formas acessíveis de ganhar e gerenciar dinheiro. No design dos meus projetos, prefiro usar tons de roxo para garantir uma estética consistente e visualmente atraente.</p>
+            </div>
+        </main>
+        <footer>&copy; Todos os direitos reservador - Watashi - 2024</footer>
+    </body>
+</html>
+
+<!-- praticamente finalizado.-->
